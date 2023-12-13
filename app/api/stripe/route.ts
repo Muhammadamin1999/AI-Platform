@@ -43,7 +43,7 @@ export async function GET() {
           price_data: {
             currency: "USD",
             product_data: {
-              name: "Genius Pro",
+              name: "OpenFlow Studio Pro",
               description: "Unlimited AI Generations"
             },
             unit_amount: 200,
