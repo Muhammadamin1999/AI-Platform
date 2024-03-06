@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+
 import { ClerkProvider } from '@clerk/nextjs'
 
 import { ToasterProvider } from '@/components/toaster-provider'
 import { ModalProvider } from '@/components/modal-provider'
 import { CrispProvider } from '@/components/crisp-provider'
-
+import { Inter } from 'next/font/google'
 import './globals.css'
+import { ThemeProvider } from '@/components/theme-provider'
 
 const font = Inter({ subsets: ['latin'] });
 
@@ -27,7 +28,14 @@ export default async function RootLayout({
         <body className={font.className}>
           <ToasterProvider />
           <ModalProvider />
+          <ThemeProvider attribute="class"
+            defaultTheme="system"
+            enableSystem
+            >
           {children}
+          </ThemeProvider>
+          
+          
         </body>
       </html>
     </ClerkProvider>

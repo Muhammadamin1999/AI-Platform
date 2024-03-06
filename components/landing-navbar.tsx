@@ -7,6 +7,7 @@ import { useAuth } from "@clerk/nextjs";
 
 import {cn} from "@/lib/utils";
 import {Button} from "@/components/ui/button";
+import { ModeToggle } from "./mode-toggle";
 
 const font = Montserrat({
    weight: "600",
@@ -37,6 +38,7 @@ return (
         Get Started
         </Button>
       </Link>
+      <ModeToggle/>
      </div>
     </nav>
 )
